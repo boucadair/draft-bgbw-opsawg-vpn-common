@@ -282,45 +282,47 @@
 
     <section title="Description of the VPN Common YANG Module">
       <t>The "ietf-vpn-common" contains the following reusable groupings and
-      identities:<figure>
-          <artwork><![CDATA[   o  vpn-description:
+      identities:</t>
 
-         A YANG grouping that provides common administrative VPN
-         information such as a name, a textual description, and a
-         customer name.
+      <t>Groupings:</t>
 
-   o  vpn-profile-cfg:
+      <t><list style="symbols">
+          <t>vpn-description: <list style="none">
+              <t>A YANG grouping that provides common administrative VPN
+              information such as a name, a textual description, and a
+              customer name.</t>
+            </list></t>
 
-         A YANG grouping that defines a set of of profiles (encryption,
-         routing, forwarding) valid for any L2/L3 VPN.
+          <t>vpn-profile-cfg: <list style="none">
+              <t>A YANG grouping that defines a set of profiles (encryption,
+              routing, forwarding) valid for any L2/L3 VPN.</t>
+            </list></t>
 
-   o  status-timestamp:
+          <t>status-timestamp: <list style="none">
+              <t>A YANG grouping that defines operational and administrative
+              updates of a component.</t>
+            </list></t>
 
-         A YANG grouping that defines updates of a component.
+          <t>service-status: <list style="none">
+              <t>A YANG grouping that defines the administrative and
+              operational status of a component. The grouping can be applied
+              to the whole service or an endpoint.</t>
+            </list></t>
 
-   o  service-status:
+          <t>svc-transport-encapsulation:<list style="none">
+              <t>A YANG grouping that defines the type of underlay transport
+              for a VPN service.</t>
+            </list></t>
 
-         A YANG grouping that defines the administrative and operational
-         status of a component.  The grouping can be applied to the
-         whole service or an end point.
+          <t>rt-rd: <list style="none">
+              <t>A YANG grouping that defines the set of route targets to
+              match for import and export routes to/from VRF.</t>
+            </list></t>
 
-   o  svc-transport-encapsulation:
-
-         A YANG grouping that defines the type of underlay transport for
-         a VPN service.
-
-   o  rt-rd:
-
-         A YANG grouping that defines the set of route targets to match
-         for import and export routes to/from VRF.
-
-   o  vpn-node-group:
-
-         A YANG grouping that is used to group vpn-network-access.
-]]></artwork>
-        </figure></t>
-
-      <t>Identities:<list style="symbols">
+          <t>vpn-node-group:<list style="none">
+              <t>A YANG grouping that is used to group vpn-network-access.</t>
+            </list></t>
+        </list>Identities:<list style="symbols">
           <t>bw-direction: Identity for the bandwidth direction.</t>
 
           <t>qos-profile-direction: Base identity for QoS profile
@@ -467,17 +469,20 @@ module ietf-vpn-common {
   organization
     "IETF OPSA (Operations and Management Area) Working Group";
   contact
-    "WG Web:   <http://tools.ietf.org/wg/opsawg/>
-        WG List:  <mailto:opsawg@ietf.org>
-        Editor:    Samier Barguil
-                  <mailto:samier.barguilgiraldo.ext@telefonica.com>
-        Editor:    Oscar Gonzalez de Dios
-                  <mailto:oscar.gonzalezdedios@telefonica.com>
-        Editor:   Mohamed Boucadair
-                  <mailto:mohamed.boucadair@orange.com>
-        Author:   Qin Wu
-                  <mailto:bill.wu@huawei.com>
-    ";
+    "WG Web:   <https://datatracker.ietf.org/wg/opsawg/>
+     WG List:  <mailto:opsawg@ietf.org>
+
+     Editor:  Samier Barguil
+              <mailto:samier.barguilgiraldo.ext@telefonica.com>
+
+     Editor:  Oscar Gonzalez de Dios
+              <mailto:oscar.gonzalezdedios@telefonica.com>
+
+     Editor:  Mohamed Boucadair
+              <mailto:mohamed.boucadair@orange.com>
+
+     Author:  Qin Wu
+              <mailto:bill.wu@huawei.com>";
   description
     "This YANG module defines a common module that is meant
      to be reused by various VPN-related modules (e.g.,
